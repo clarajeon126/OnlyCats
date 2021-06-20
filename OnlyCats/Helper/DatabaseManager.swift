@@ -111,4 +111,14 @@ public class DatabaseManager{
         
     }
     
+    //change user data
+    public func updateCurrentUserProfilePaws(completion: @escaping ((_ succes: Bool) -> ())){
+        guard let currentUserUid = UserProfile.currentUserProfile?.uid else {
+            return
+        }
+        let newPaws = UserProfile.currentUserProfile?.paws
+        database.child("users").child(currentUserUid).updateChildValues( ["paws": newPaws])
+        completion(true)
+    }
+    
 }

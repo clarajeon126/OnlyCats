@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4388BDE9055E9D1A44B03161 /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE155FEE09759684FBB98C9 /* Pods_OnlyCats.framework */; };
+		851B8835267F55FF00DF7E2E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B8834267F55FF00DF7E2E /* AboutViewController.swift */; };
 		85C9C92E267F360D00194A69 /* ArViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9C92D267F360D00194A69 /* ArViewController.swift */; };
 		85C9C935267F3A8F00194A69 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C9C934267F3A8F00194A69 /* art.scnassets */; };
 		85CE0E58267F10620045951D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0E57267F10620045951D /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		1290545A3394D6556C995E5A /* Pods-OnlyCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlyCats.release.xcconfig"; path = "Target Support Files/Pods-OnlyCats/Pods-OnlyCats.release.xcconfig"; sourceTree = "<group>"; };
 		1FE155FEE09759684FBB98C9 /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FCEE9624E13D581034B011 /* Pods-OnlyCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlyCats.debug.xcconfig"; path = "Target Support Files/Pods-OnlyCats/Pods-OnlyCats.debug.xcconfig"; sourceTree = "<group>"; };
+		851B8834267F55FF00DF7E2E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		85C9C92D267F360D00194A69 /* ArViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArViewController.swift; sourceTree = "<group>"; };
 		85C9C934267F3A8F00194A69 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		85CE0E54267F10620045951D /* OnlyCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlyCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				85F18B28267F11F600DE029B /* SettingViewController.swift */,
+				851B8834267F55FF00DF7E2E /* AboutViewController.swift */,
 				85C9C92D267F360D00194A69 /* ArViewController.swift */,
 				85F18B29267F11F600DE029B /* CatViewController.swift */,
 				85F18B2A267F11F600DE029B /* ImageViewController.swift */,
@@ -373,6 +376,7 @@
 				85F18B47267F11F600DE029B /* Cat.swift in Sources */,
 				85F18B3F267F11F600DE029B /* ImageViewController.swift in Sources */,
 				85F18B3B267F11F600DE029B /* DatabaseManager.swift in Sources */,
+				851B8835267F55FF00DF7E2E /* AboutViewController.swift in Sources */,
 				85F18B46267F11F600DE029B /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
