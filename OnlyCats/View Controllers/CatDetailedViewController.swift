@@ -79,10 +79,20 @@ class CatDetailedViewController: UIViewController {
         let alert = UIAlertController(title: "purchase chatting with \(cat.name)?", message: "this action is not reversible and costs 120 paws!", preferredStyle: .alert)
         
         let nevermindAction = UIAlertAction(title: "nevermind", style: .cancel, handler: nil)
-        let yesAction = UIAlertAction(title: "i'm sure!!", style: .destructive) { alertAction in
+        let yesAction = UIAlertAction(title: "i'm sure!!", style: .destructive) { [self] alertAction in
+            var botId = ""
+            if cat.name == "Trent" {
+                botId = "trent-uhjra"
+            }
+            else if cat.name == "Poe" {
+                botId = "poe-ueqi8"
+            }
+            else {
+                botId = ""
+            }
             let kmConversation = KMConversationBuilder()
 
-                .withBotIds(["poe-ueqi8"])
+                .withBotIds([botId])
                 // To set the custom title
                 .withConversationTitle("Chat with \(self.cat.name)")
                 .useLastConversation(false)
