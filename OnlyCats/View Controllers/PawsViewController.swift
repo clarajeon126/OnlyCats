@@ -9,10 +9,13 @@ import UIKit
 
 class PawsViewController: UIViewController {
 
+    @IBOutlet var blueViews: [UIView]!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        for x in 0..<blueViews.count {
+            blueViews[x].layer.cornerRadius = 15
+        }
     }
     
 
