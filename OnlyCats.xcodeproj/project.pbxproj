@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4388BDE9055E9D1A44B03161 /* Pods_OnlyCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE155FEE09759684FBB98C9 /* Pods_OnlyCats.framework */; };
 		85C9C92E267F360D00194A69 /* ArViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9C92D267F360D00194A69 /* ArViewController.swift */; };
+		85C9C935267F3A8F00194A69 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C9C934267F3A8F00194A69 /* art.scnassets */; };
 		85CE0E58267F10620045951D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0E57267F10620045951D /* AppDelegate.swift */; };
 		85CE0E5A267F10620045951D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0E59267F10620045951D /* SceneDelegate.swift */; };
 		85CE0E61267F10650045951D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CE0E60267F10650045951D /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		1FE155FEE09759684FBB98C9 /* Pods_OnlyCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlyCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FCEE9624E13D581034B011 /* Pods-OnlyCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlyCats.debug.xcconfig"; path = "Target Support Files/Pods-OnlyCats/Pods-OnlyCats.debug.xcconfig"; sourceTree = "<group>"; };
 		85C9C92D267F360D00194A69 /* ArViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArViewController.swift; sourceTree = "<group>"; };
+		85C9C934267F3A8F00194A69 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		85CE0E54267F10620045951D /* OnlyCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlyCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CE0E57267F10620045951D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85CE0E59267F10620045951D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				85F18B27267F11F600DE029B /* View Controllers */,
 				85F18B49267F11FD00DE029B /* Marguerite1 */,
 				85CE0E60267F10650045951D /* Assets.xcassets */,
+				85C9C934267F3A8F00194A69 /* art.scnassets */,
 				85CE0E65267F10650045951D /* Info.plist */,
 				85F18B58267F120500DE029B /* GoogleService-Info.plist */,
 			);
@@ -272,6 +275,7 @@
 				85F18B55267F11FD00DE029B /* ffonts.net.txt in Resources */,
 				85F18B59267F120500DE029B /* GoogleService-Info.plist in Resources */,
 				85F18B45267F11F600DE029B /* catTableViewCell.xib in Resources */,
+				85C9C935267F3A8F00194A69 /* art.scnassets in Resources */,
 				85F18B57267F11FD00DE029B /* Read Me.rtf in Resources */,
 				85F18B56267F11FD00DE029B /* install-a-new-font.txt in Resources */,
 				85CE0E61267F10650045951D /* Assets.xcassets in Resources */,

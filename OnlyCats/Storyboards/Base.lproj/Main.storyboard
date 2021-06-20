@@ -397,6 +397,9 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjQ-RX-C3F">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="77"/>
+                                                                <connections>
+                                                                    <segue destination="wdK-ju-Do8" kind="presentation" modalPresentationStyle="fullScreen" id="O4r-n9-0OJ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
