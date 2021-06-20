@@ -542,6 +542,35 @@
             </objects>
             <point key="canvasLocation" x="-207" y="1538"/>
         </scene>
+        <!--Ar View Controller-->
+        <scene sceneID="BBI-NL-I5S">
+            <objects>
+                <viewController id="wdK-ju-Do8" customClass="ArViewController" customModule="OnlyCats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJv-3b-taL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOm-rf-CkR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dXX-3X-V7a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tOm-rf-CkR" firstAttribute="leading" secondItem="dXX-3X-V7a" secondAttribute="leading" id="1Gz-VZ-uI7"/>
+                            <constraint firstItem="dXX-3X-V7a" firstAttribute="trailing" secondItem="tOm-rf-CkR" secondAttribute="trailing" id="KG8-8V-0K6"/>
+                            <constraint firstItem="tOm-rf-CkR" firstAttribute="top" secondItem="zJv-3b-taL" secondAttribute="top" id="Kal-aI-eaD"/>
+                            <constraint firstAttribute="bottom" secondItem="tOm-rf-CkR" secondAttribute="bottom" id="xmk-65-th9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="tOm-rf-CkR" id="tND-nX-6Dc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldp-L4-z43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="1548"/>
+        </scene>
         <!--Paws View Controller-->
         <scene sceneID="Qps-CE-6y3">
             <objects>
