@@ -13,6 +13,7 @@ class ArViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     
+    var catName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
@@ -52,7 +53,7 @@ class ArViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func createCat(position: SCNVector3){
-        var catNode = collada2SCNNode(filepath: "art.scnassets/leximodel/lexi.dae")
+        var catNode = collada2SCNNode(filepath: "art.scnassets/\(catName)model/\(catName).dae")
 
         catNode.position = position
         

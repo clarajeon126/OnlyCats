@@ -219,7 +219,8 @@ class CatDetailedViewController: UIViewController {
             imageVC.imageInQuestion = imageToBeSent
         }
         else if segue.identifier == "toAr" {
-            
+            let arVC = segue.destination as! ArViewController
+            arVC.catName = cat.name
         }
         
     }
