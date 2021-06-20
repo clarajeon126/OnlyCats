@@ -25,7 +25,6 @@
 		85F18B3D267F11F600DE029B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B28267F11F600DE029B /* SettingViewController.swift */; };
 		85F18B3E267F11F600DE029B /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B29267F11F600DE029B /* CatViewController.swift */; };
 		85F18B3F267F11F600DE029B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B2A267F11F600DE029B /* ImageViewController.swift */; };
-		85F18B40267F11F600DE029B /* MessageSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B2B267F11F600DE029B /* MessageSendViewController.swift */; };
 		85F18B41267F11F600DE029B /* PawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B2C267F11F600DE029B /* PawsViewController.swift */; };
 		85F18B42267F11F600DE029B /* CatDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B2D267F11F600DE029B /* CatDetailedViewController.swift */; };
 		85F18B43267F11F600DE029B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F18B2E267F11F600DE029B /* LoginViewController.swift */; };
@@ -67,7 +66,6 @@
 		85F18B28267F11F600DE029B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		85F18B29267F11F600DE029B /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		85F18B2A267F11F600DE029B /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		85F18B2B267F11F600DE029B /* MessageSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageSendViewController.swift; sourceTree = "<group>"; };
 		85F18B2C267F11F600DE029B /* PawsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawsViewController.swift; sourceTree = "<group>"; };
 		85F18B2D267F11F600DE029B /* CatDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatDetailedViewController.swift; sourceTree = "<group>"; };
 		85F18B2E267F11F600DE029B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				85C9C92D267F360D00194A69 /* ArViewController.swift */,
 				85F18B29267F11F600DE029B /* CatViewController.swift */,
 				85F18B2A267F11F600DE029B /* ImageViewController.swift */,
-				85F18B2B267F11F600DE029B /* MessageSendViewController.swift */,
 				85F18B2C267F11F600DE029B /* PawsViewController.swift */,
 				85F18B2D267F11F600DE029B /* CatDetailedViewController.swift */,
 				85F18B2E267F11F600DE029B /* LoginViewController.swift */,
@@ -358,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F18B40267F11F600DE029B /* MessageSendViewController.swift in Sources */,
 				85F18B44267F11F600DE029B /* ImageService.swift in Sources */,
 				85F18B42267F11F600DE029B /* CatDetailedViewController.swift in Sources */,
 				85F18B39267F11F600DE029B /* Extensions.swift in Sources */,

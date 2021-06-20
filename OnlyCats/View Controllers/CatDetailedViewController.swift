@@ -130,8 +130,9 @@ class CatDetailedViewController: UIViewController {
                         botId = "poe-ueqi8"
                     }
                     else {
-                        botId = ""
+                        botId = "lexi-7uu3t"
                     }
+                    
                     let kmConversation = KMConversationBuilder()
                         
                         .withBotIds([botId])
