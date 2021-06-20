@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Kommunicate
 
 public var cats = [Cat]()
 
@@ -57,6 +58,19 @@ class CatViewController: UIViewController {
                 if cats.count == 0 {
                     DatabaseManager.shared.getCats { catsinside in
                         cats = catsinside
+                        let userId = Kommunicate.randomId()
+                        let kmUser = KMUser()
+                        kmUser.userId = userId
+                        kmUser.displayName = userProfile?.firstName
+                        kmUser.applicationId = "168b157c6261ba66ce468994213834b28"
+
+                        // Use this same API for login
+                        Kommunicate.registerUser(kmUser, completion: {
+                            response, error in
+                            guard error == nil else {return}
+                            print("Success")
+                        })
+                        
                         self.catTableView.reloadData()
                     }
                 }

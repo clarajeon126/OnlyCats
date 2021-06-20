@@ -39,6 +39,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>use camera for kommunicate</string>
+	<key>NSContactsUsageDescription</key>
+	<string>use contacts for kommunicate</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>use location for kommunicate</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>use mic for kommunicate</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>to download the purchased image/video to your storage :)</string>
 	<key>UIApplicationSceneManifest</key>

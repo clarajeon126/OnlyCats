@@ -349,6 +349,9 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTh-l0-n3U">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="77"/>
+                                                                <connections>
+                                                                    <action selector="chatButtonTapped:" destination="POo-bb-MPA" eventType="touchUpInside" id="ll1-Nx-EIE"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>

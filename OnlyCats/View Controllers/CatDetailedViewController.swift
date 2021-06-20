@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import Kommunicate
 
 class CatDetailedViewController: UIViewController {
 
@@ -74,6 +75,42 @@ class CatDetailedViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func chatButtonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "purchase chatting with \(cat.name)?", message: "this action is not reversible and costs 120 paws!", preferredStyle: .alert)
+        
+        let nevermindAction = UIAlertAction(title: "nevermind", style: .cancel, handler: nil)
+        let yesAction = UIAlertAction(title: "i'm sure!!", style: .destructive) { alertAction in
+            let kmConversation = KMConversationBuilder()
+
+                .withBotIds(["poe-ueqi8"])
+                // To set the custom title
+                .withConversationTitle("Chat with \(self.cat.name)")
+                .useLastConversation(false)
+                .build()
+
+            Kommunicate.createConversation(conversation: kmConversation) { result in
+                switch result {
+                case .success(let conversationId):
+                    print("Conversation id: ",conversationId)
+                    Kommunicate.showConversationWith(
+                        groupId: conversationId,
+                        from: self,
+                        showListOnBack: false, // If true, then the conversation list will be shown on tap of the back button.
+                        completionHandler: { success in
+                        print("conversation was shown")
+                    })
+                // Launch conversation
+                case .failure(let kmConversationError):
+                    print("Failed to create a conversation: ", kmConversationError)
+                }
+            }
+        }
+        
+        alert.addAction(nevermindAction)
+        alert.addAction(yesAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
