@@ -15,7 +15,6 @@ class SettingViewController: UIViewController {
             DispatchQueue.main.async {
                 if success {
                     UserProfile.currentUserProfile = nil
-                    
                     let startingStoryBoard = UIStoryboard(name: "Starting", bundle: nil)
                     let loginVC = startingStoryBoard.instantiateViewController(withIdentifier: "LoginViewController") as UIViewController
                     loginVC.modalPresentationStyle = .fullScreen

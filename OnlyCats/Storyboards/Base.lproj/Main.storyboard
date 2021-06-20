@@ -1015,7 +1015,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VXa-TL-rPw">
-                                <rect key="frame" x="145" y="263" width="124" height="172"/>
+                                <rect key="frame" x="145" y="263" width="124" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNB-CK-Q6D">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="44"/>
@@ -1034,44 +1034,10 @@
                                             <action selector="githubPressed:" destination="GWd-vH-ea0" eventType="touchUpInside" id="1b9-46-t6k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-sY-wxo">
-                                        <rect key="frame" x="0.0" y="64" width="124" height="44"/>
-                                        <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                        <state key="normal" title="Youtube">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="youtubePressed:" destination="GWd-vH-ea0" eventType="touchUpInside" id="yt2-zg-oRm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7l-0E-eFe">
-                                        <rect key="frame" x="0.0" y="128" width="124" height="44"/>
-                                        <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                        <state key="normal" title="Devpost">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="devpostPressed:" destination="GWd-vH-ea0" eventType="touchUpInside" id="3ne-Wk-GV9"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlycatstrans" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-kV-ZrX">
-                                <rect key="frame" x="0.0" y="405" width="414" height="561"/>
+                                <rect key="frame" x="0.0" y="277" width="414" height="561"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oxW-he-ZUL"/>

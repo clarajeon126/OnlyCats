@@ -14,17 +14,7 @@ class AboutViewController: UIViewController {
             UIApplication.shared.openURL(url as URL)
             }
     }
-    @IBAction func youtubePressed(_ sender: Any) {
-        if let url = NSURL(string: "https://github.com/clarajeon126/OnlyCats"){
-            UIApplication.shared.openURL(url as URL)
-            }
-    }
-    
-    @IBAction func devpostPressed(_ sender: Any) {
-        if let url = NSURL(string: "https://github.com/clarajeon126/OnlyCats"){
-            UIApplication.shared.openURL(url as URL)
-            }
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

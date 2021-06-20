@@ -59,6 +59,7 @@ class CatViewController: UIViewController {
                     DatabaseManager.shared.getCats { catsinside in
                         cats = catsinside
                         let userId = Kommunicate.randomId()
+                        print(userId)
                         let kmUser = KMUser()
                         kmUser.userId = userId
                         kmUser.displayName = userProfile?.firstName
