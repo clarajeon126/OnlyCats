@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginViewController-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="OnlyCats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlycatstrans" translatesAutoresizingMaskIntoConstraints="NO" id="kNw-Eb-Pcr">
+                                <rect key="frame" x="50" y="144" width="314" height="191.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-qt-P0v" customClass="GIDSignInButton">
+                                <rect key="frame" x="80" y="425.5" width="254" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by: clara jeon for hydrangea hacks!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-u0-dBo">
+                                <rect key="frame" x="128.5" y="811" width="157.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hEb-qt-P0v" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Tnl-RS-saV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="c3h-u0-dBo" secondAttribute="bottom" constant="10" id="WDt-FL-RT0"/>
+                            <constraint firstItem="hEb-qt-P0v" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="80" id="dPE-La-YXd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kNw-Eb-Pcr" secondAttribute="trailing" constant="50" id="eOc-Rk-yga"/>
+                            <constraint firstItem="hEb-qt-P0v" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.05" id="gR3-ui-axr"/>
+                            <constraint firstItem="kNw-Eb-Pcr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="hqy-S3-McW"/>
+                            <constraint firstItem="hEb-qt-P0v" firstAttribute="top" secondItem="kNw-Eb-Pcr" secondAttribute="bottom" constant="90" id="ieG-8J-DQO"/>
+                            <constraint firstItem="kNw-Eb-Pcr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="jc5-Nw-CPb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hEb-qt-P0v" secondAttribute="trailing" constant="80" id="m55-Zz-thm"/>
+                            <constraint firstItem="c3h-u0-dBo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="woU-3p-FFo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="273-TY-fL5" kind="presentation" identifier="loginToMain" modalPresentationStyle="fullScreen" id="UVs-hq-fCH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="113.83928571428571"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="niu-B8-th0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="273-TY-fL5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPq-wM-u3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onlycatstrans" width="1000" height="561"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

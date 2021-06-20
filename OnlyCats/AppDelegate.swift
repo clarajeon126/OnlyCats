@@ -6,16 +6,95 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //firebase
+        FirebaseApp.configure()
+        
+        //google sign in
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
     }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        // sign in error
+        if let error = error {
+            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                print("The user has not signed in before or they have since signed out.")
+            } else {
+                print("\(error.localizedDescription)")
+            }
+            return
+        }
+        
+        // access token
+        guard let authentication = user.authentication else {
+            return
+        }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error {
+                print("Error occurs when authenticate with Firebase: \(error.localizedDescription)")
+            }
+            
+            let isNewUser = authResult?.additionalUserInfo?.isNewUser
+            
+            if isNewUser ?? false {
+                let firstName = user.profile.givenName ?? "firstName"
+                let lastName = user.profile.familyName ?? "lastName"
+                let profilePhotoImage = GIDSignIn.sharedInstance()?.currentUser.profile.hasImage
+                
+                var profilePhotoUrl: URL?
+                
+                //when user has a google profile image
+                if (profilePhotoImage ?? false){
+                    let googleProfilePhotoUrl = GIDSignIn.sharedInstance()?.currentUser.profile.imageURL(withDimension: 400)?.absoluteString
+                    
+                    StorageManager.shared.uploadGoogleUrlProfilePhoto(googleProfilePhotoUrl!) { (url) in
+                        profilePhotoUrl = url
+                        DatabaseManager.shared.insertNewUser(firstName: firstName, lastName: lastName, uid: "googleid", profilePhotoURL: url!) { success in
+                            // Post notification after user successfully sign in
+                            NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
+                            
+                        }
+                    }
+                }
+                else {
+                    let defaultProfilePhoto = #imageLiteral(resourceName: "defaultpp")
+                    
+                    StorageManager.shared.uploadGeneralProfilePhoto(defaultProfilePhoto) { (url) in
+                        profilePhotoUrl = url
+                        
+                        DatabaseManager.shared.insertNewUser(firstName: firstName, lastName: lastName, uid: "googleid", profilePhotoURL: url!) { success in
+                            // Post notification after user successfully sign in
+                            NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
+                            
+                        }
+                    }
+                }
+            }
+            else {
+                NotificationCenter.default.post(name: .returnUserSignInGoogleCompleted, object: nil)
+            }
+            
+            
+            
+        }
+    }
+}
 
     // MARK: UISceneSession Lifecycle
 
@@ -32,5 +111,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
 
